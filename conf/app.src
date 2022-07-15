@@ -1,7 +1,7 @@
-SOURCE_URL=url of app's source
+SOURCE_URL=https://git.afi-sa.net/afi/opacce/-/archive/8.0.164/opacce-8.0.164.tar.gz
 SOURCE_SUM=sha256 checksum
 SOURCE_SUM_PRG=sha256sum
 SOURCE_FORMAT=tar.gz
-SOURCE_IN_SUBDIR=true
+SOURCE_IN_SUBDIR=false
 SOURCE_FILENAME=
-SOURCE_EXTRACT=true
+SOURCE_EXTRACT=false

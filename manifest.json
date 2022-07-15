@@ -1,25 +1,23 @@
 {
-    "name": "Example app",
-    "id": "example",
+    "name": "Bokeh",
+    "id": "bokeh",
     "packaging_format": 1,
     "description": {
-        "en": "Explain in *a few (10~15) words* the purpose of the app or what it actually does (it is meant to give a rough idea to users browsing a catalog of 100+ apps)",
-        "fr": "Expliquez en *quelques* (10~15) mots l'utilité de l'app ou ce qu'elle fait (l'objectif est de donner une idée grossière pour des utilisateurs qui naviguent dans un catalogue de 100+ apps)"
+        "en": "Bokeh is a library resource portal and CMS for libraries",
+        "fr": "Bokeh est portail pour les bibliothèques et centres de documentation"
     },
     "version": "1.0~ynh1",
-    "url": "https://example.com",
+    "url": "https://www.bokeh-library-portal.org/",
     "upstream": {
         "license": "free",
-        "website": "https://example.com",
-        "demo": "https://demo.example.com",
-        "admindoc": "https://yunohost.org/packaging_apps",
-        "userdoc": "https://yunohost.org/apps",
-        "code": "https://some.forge.com/example/example"
+        "website": "https://www.bokeh-library-portal.org/",
+        "admindoc": "https://wiki.bokeh-library-portal.org/",
+        "code": "https://git.afi-sa.net/afi/opacce/"
     },
     "license": "free",
     "maintainer": {
-        "name": "John doe",
-        "email": "john.doe@example.com"
+        "name": "Laurent Laffont",
+        "email": "llaffont@afi-sa.fr"
     },
     "requirements": {
         "yunohost": ">= 4.3.0"
@@ -27,7 +25,7 @@
     "multi_instance": true,
     "services": [
         "nginx",
-        "php7.3-fpm",
+        "php7.4-fpm",
         "mysql"
     ],
     "arguments": {
@@ -39,8 +37,8 @@
             {
                 "name": "path",
                 "type": "path",
-                "example": "/example",
-                "default": "/example"
+                "example": "/bokeh",
+                "default": "/bokeh"
             },
             {
                 "name": "is_public",
@@ -59,14 +57,18 @@
             },
             {
                 "name": "admin",
-                "type": "user"
+                "type": "user",
+                "help": {
+                    "en": "Administrator account login",
+                    "fr": "Identifiant du compte administrateur"
+                }
             },
             {
                 "name": "password",
                 "type": "password",
                 "help": {
-                    "en": "Use the help field to add an information for the admin about this question.",
-                    "fr": "Utilisez le champ aide pour ajouter une information à l'intention de l'administrateur à propos de cette question."
+                    "en": "Administrator password",
+                    "fr": "Mot de passe du compte administrateur"
                 }
             }
         ]
